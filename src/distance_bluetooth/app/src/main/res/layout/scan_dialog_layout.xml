@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/internal_padding"
+    tools:layout_width="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/devices_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_marginBottom="15dp"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:id="@+id/no_devices"
+                style="@style/InfoText"
+                android:text="@string/no_devices_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:id="@+id/searching_progress"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ble_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/InfoText"
+                android:text="@string/bluetooth_disabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/enable_ble"
+                android:id="@+id/enable_ble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/location_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/InfoText"
+                android:text="@string/location_disabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/enable_location"
+                android:id="@+id/enable_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/location_perm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/InfoText"
+                android:text="@string/location_perm_required"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Theme.MaterialComponents.Light"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/grant"
+                android:id="@+id/grant_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

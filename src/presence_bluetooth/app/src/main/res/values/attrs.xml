@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PresenceView">
+        <attr name="num_lines" format="integer"/>
+        <attr name="presence_color" format="color"/>
+        <attr name="range_start" format="integer"/>
+        <attr name="range_length" format="integer" />
+        <attr name="src_icon" format="reference"/>
+        <attr name="src_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LabeledImageButton">
+        <attr name="imgSrc" format="reference" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="preferences.ConfirmPreference">
+        <attr name="dialogText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="preferences.StartPreference">
+        <attr name="active" format="boolean"/>
+        <attr name="summaryOn" format="string"/>
+        <attr name="summaryOff" format="string"/>
+    </declare-styleable>
+</resources>

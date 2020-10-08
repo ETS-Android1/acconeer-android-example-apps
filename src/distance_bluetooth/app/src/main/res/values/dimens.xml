@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="internal_padding">10dp</dimen>
+
+    <dimen tools:override="true" name="preference_seekbar_padding_horizontal">0dp</dimen>
+    <dimen tools:override="true" name="preference_seekbar_padding_vertical">15dp</dimen>
+    <dimen tools:override="true" name="preference_seekbar_value_minWidth">36dp</dimen>
+    <dimen name="info_text_size">16sp</dimen>
+</resources>

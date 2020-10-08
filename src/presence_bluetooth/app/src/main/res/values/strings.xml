@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Acconeer Presence</string>
+    <string name="settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="presence_detection">Presence Detection</string>
+
+    <string name="range_start">Range start</string>
+    <string name="range_length">Range length</string>
+    <string name="restore_defaults">Restore defaults</string>
+    <string name="profile">Profile</string>
+    <string name="update_rate">Update rate</string>
+    <string name="connect">Connect</string>
+    <string name="fixed_threshold">Threshold</string>
+    <string name="connection_indicator">Connection Indicator</string>
+    <string name="no_distance_indicator">-</string>
+    <string name="preferences_actions">Actions</string>
+    <string name="start_search">Start</string>
+    <string name="not_set">Not set</string>
+    <string name="start_scan">Start scan</string>
+    <string name="close">Close</string>
+    <string name="stop_scan">Stop scan</string>
+    <string name="find_device">Find device</string>
+    <string name="connected">Connection established</string>
+    <string name="connecting">Connecting...</string>
+    <string name="not_supported">Device not supported!</string>
+    <string name="connected_success">Connected</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="disconnect_question">Do you want to disconnect from current device?</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="not_connected">Not connected</string>
+    <string name="connected_device">Connected device</string>
+    <string name="start_update">Start/Update</string>
+    <string name="reset_settings_summary">Set all settings to default</string>
+    <string name="start_summary">Start the distance measurement</string>
+    <string name="restore_settings_confirm_question">Are you sure you want to restore all settings to default?</string>
+    <string name="search_close">Close</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="bluetooth_disabled">Bluetooth is disabled</string>
+    <string name="enable_ble">Enable</string>
+    <string name="location_perm_required">Permission to access location required</string>
+    <string name="grant">Grant</string>
+    <string name="location_disabled">Location services are disabled</string>
+    <string name="enable_location">Enable</string>
+    <string name="leave">Leave</string>
+    <string name="send_and_leave">Send and leave</string>
+    <string name="not_updated">Not updated</string>
+    <string name="message_leave_without_setting">Parameters have been changed but not yet sent to the device. Are you sure you want to leave this screen?</string>
+    <string name="max_depth_res">Max depth res.</string>
+    <string name="max_gain">Max gain</string>
+    <string name="distance">Distance: %s</string>
+    <string name="presence_score">Presence score: %s</string>
+    <string name="num_zones">Number of zones</string>
+    <string name="show_distance">Show distance</string>
+    <string name="show_distance_summary">Show the measured distance below the presence score</string>
+    <string name="num_zones_summary">Number of zones to divide the presence range into</string>
+</resources>

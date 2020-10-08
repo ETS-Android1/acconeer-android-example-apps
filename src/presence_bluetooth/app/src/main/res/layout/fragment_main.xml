@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.acconeer.bluetooth.presence.activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/logo"
+        app:titleTextColor="@android:color/white"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.acconeer.bluetooth.presence.views.PresenceView
+        android:id="@+id/presence_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/internal_padding"
+        app:layout_constraintBottom_toTopOf="@id/connectionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:num_lines="6"
+        app:presence_color="@color/colorPrimary"
+        app:range_length="1500"
+        app:range_start="0"
+        app:src_size="40dp"
+        app:src_icon="@drawable/sensor_image" />
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/presence_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textviews"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            tools:text="Presence score: xy.z"
+            android:id="@+id/presence_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            tools:text="Distance: x.y"
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.acconeer.bluetooth.presence.views.ConnectionButton
+        android:layout_marginEnd="@dimen/internal_padding"
+        android:layout_marginBottom="@dimen/internal_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/connectionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:imgSrc="@drawable/ic_bluetooth_disabled_black_24dp"
+        app:text="@string/connect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

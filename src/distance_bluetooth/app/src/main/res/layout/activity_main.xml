@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.acconeer.bluetooth.distance.activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/logo"
+        app:titleTextColor="@android:color/white"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/internal_padding"
+        android:layout_marginEnd="@dimen/internal_padding"
+        android:layout_marginStart="@dimen/internal_padding"
+        android:layout_marginTop="@dimen/internal_padding"
+        android:minHeight="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.acconeer.bluetooth.distance.views.DistanceGauge
+            android:layout_margin="@dimen/internal_padding"
+            android:layout_marginBottom="@dimen/internal_padding"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/gauge"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/internal_padding"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/internal_padding"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:id="@+id/distance_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/distancemm"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="@string/no_distance_indicator"
+                android:id="@+id/distance_text"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance_label"
+                android:layout_marginTop="7dp" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/internal_padding"
+        android:layout_marginStart="@dimen/internal_padding"
+        android:layout_marginTop="@dimen/internal_padding"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:id="@+id/signal_strength_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signal_strength"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.acconeer.bluetooth.distance.views.SignalStrengthIndicator
+                android:id="@+id/signal_strength"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_below="@id/signal_strength_label"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_marginEnd="@dimen/internal_padding"
+        android:layout_marginBottom="@dimen/internal_padding"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.acconeer.bluetooth.distance.views.LabeledImageButton
+            android:id="@+id/warningButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:imgSrc="@drawable/ic_warning_black_24dp"
+            app:text="@string/gain_error"
+            tools:visibility="visible" />
+
+        <com.acconeer.bluetooth.distance.views.ConnectionButton
+            android:id="@+id/connectionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:imgSrc="@drawable/ic_bluetooth_disabled_black_24dp"
+            app:text="@string/connect" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

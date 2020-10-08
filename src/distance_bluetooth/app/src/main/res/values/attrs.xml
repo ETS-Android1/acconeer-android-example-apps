@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DistanceGauge">
+        <attr name="numBigSections" format="integer" />
+        <attr name="numSmallSections" format="integer" />
+        <attr name="rangeStart" format="integer" />
+        <attr name="rangeEnd" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SignalStrengthIndicator">
+        <attr name="numBars" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="LabeledImageButton">
+        <attr name="imgSrc" format="reference" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="preferences.ConfirmPreference">
+        <attr name="dialogText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="preferences.StartPreference">
+        <attr name="active" format="boolean"/>
+        <attr name="summaryOn" format="string"/>
+        <attr name="summaryOff" format="string"/>
+    </declare-styleable>
+</resources>
