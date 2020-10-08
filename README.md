@@ -3,9 +3,9 @@
 
 ## Installation Instructions
 
-Install the example APKs according to the instructions [here](https://developer.android.com/distribute/marketing-tools/alternative-distribution#unknown-sources) for installing APKs from unknown sources.
+Install the example APKs according to the instructions for installing APKs from unknown sources [here](https://developer.android.com/distribute/marketing-tools/alternative-distribution#unknown-sources).
 
-As you run the app for the first time it too will ask for relevant permissions.
+As you run the app for the first time it will ask for relevant permissions.
 
 When installation is complete, please run the app as follows:
 
