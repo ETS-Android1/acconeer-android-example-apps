@@ -199,7 +199,7 @@ public class ScanningDialogFragment extends PreferenceDialogFragmentCompat imple
             startActivity(new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE));
         });
         grantLocationButton.setOnClickListener(v -> {
-            requestPermissions(new String[] {Manifest.permission.ACCESS_COARSE_LOCATION},
+            requestPermissions(new String[] {Manifest.permission.ACCESS_FINE_LOCATION},
                     LOCATION_PERM_REQUEST_CODE);
         });
 

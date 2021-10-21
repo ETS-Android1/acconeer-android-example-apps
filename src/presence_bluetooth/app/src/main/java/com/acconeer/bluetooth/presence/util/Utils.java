@@ -29,7 +29,7 @@ public class Utils {
     }
 
     public static boolean hasLocationPermission(Context context) {
-        return ContextCompat.checkSelfPermission( context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+	return ContextCompat.checkSelfPermission( context, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
     //Thank you StackOverflow
