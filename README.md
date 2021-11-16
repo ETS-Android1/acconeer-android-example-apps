@@ -5,7 +5,7 @@ These Android applications are designed to be used together with the _XM122 Blue
 ## Installation Instructions XM122 Firmware
 
   1. Select the _Applications and tools_ tab on  [http://developer.acconeer.com](https://developer.acconeer.com) and download the "XM122 Bluetooth Demo App". 
-  2. Install the precompiled firmware (_out/bluetooth_demo_app_xm122.zip_) according to the instructions on page 6-7 in the [XM112 Getting Started Guide](https://developer.acconeer.com/download/getting-started-guide-xm122-pdf/). 
+  2. Install the precompiled firmware (_out/bluetooth_demo_app_xm122.zip_) according to the instructions on page 6-7 in the [XM122 Getting Started Guide](https://developer.acconeer.com/download/getting-started-guide-xm122-pdf/). 
 
 ## Installation Instructions Android Applications
 
